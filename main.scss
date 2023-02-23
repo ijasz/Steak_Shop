@@ -1,0 +1,54 @@
+@import "./responsive";
+@import "./nav";
+@import "./coverImage";
+@import "./our-services";
+@import "./video";
+@import "./popular-orders";
+@import "./feedback";
+@import "./clients";
+@import "./footer";
+
+:root {
+  --primary: #76b456;
+}
+
+html {
+  font-size: 10px;
+  @include mq(1000px) {
+    font-size: 9px;
+  }
+}
+
+h1.title {
+  @include mq(1000px) {
+    font-size: 3rem;
+  }
+}
+
+.text-dark {
+  color: #010100;
+}
+
+.text-light {
+  color: #0101007c;
+}
+
+.text-white {
+  color: white;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn:active {
+  scale: 1.1;
+}
+
+.btn > span::selection {
+  background-color: transparent;
+}
+
+.sub-title {
+  line-height: 2.5rem;
+}

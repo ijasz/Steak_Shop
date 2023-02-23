@@ -1,0 +1,49 @@
+.popular-orders {
+  .sub-title {
+    max-width: 60rem;
+  }
+
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    margin-inline: auto;
+
+    @include mq(1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(700px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-item {
+      position: relative;
+      border-radius: 1rem;
+      transition: all 0.5s;
+
+      .image {
+        position: relative;
+        img {
+          min-height: 20rem;
+          object-fit: cover;
+        }
+
+        .price {
+          content: "$ 10.00";
+          position: absolute;
+          right: 5%;
+          bottom: 5%;
+          height: 4rem;
+          width: 10rem;
+          background-color: white;
+        }
+      }
+
+      .order-btn {
+        max-width: 130px;
+        border: 1px solid var(--primary);
+      }
+    }
+  }
+}
